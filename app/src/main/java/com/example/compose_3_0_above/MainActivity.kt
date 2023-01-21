@@ -11,12 +11,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.compose_3_0_above.screen.CustomToggleButton
-import com.example.compose_3_0_above.screen.SearchView
-import com.example.compose_3_0_above.screen.navigation.MainNavigation
-import com.example.compose_3_0_above.screen.viewmodel.SharedViewModel
+import com.example.compose_3_0_above.sharedviewmodel.ScreenNavigation
 import com.example.compose_3_0_above.ui.theme.Compose_30_aboveTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +26,7 @@ class MainActivity : ComponentActivity() {
 //                           selected = it
 //                       })
 //                   }
-                    MainNavigation()
+                    ScreenNavigation()
                 }
             }
         }

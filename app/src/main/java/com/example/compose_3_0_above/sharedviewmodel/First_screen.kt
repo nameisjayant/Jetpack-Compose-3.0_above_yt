@@ -1,4 +1,4 @@
-package com.example.compose_3_0_above.screen.navigation
+package com.example.compose_3_0_above.sharedviewmodel
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -8,21 +8,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import com.example.compose_3_0_above.screen.viewmodel.SharedViewModel
+import com.example.compose_3_0_above.sharedviewmodel.viewmodel.SharedViewModel
 
 
 @Composable
-fun FirstScreen(
-    navHostController: NavHostController,
-    viewModel: SharedViewModel
-) {
+fun FirstScreen(navHostController: NavHostController,viewModel: SharedViewModel) {
 
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
         Button(onClick = {
-            viewModel.setData("Hello , how are you")
-            navHostController.navigate(Screen.SECOND)
+            viewModel.setData("Hello how are you?")
+            navHostController.navigate(SECOND_SCREEN)
         }) {
-            Text(text = "Send message")
+            Text(text = "Send Data")
         }
     }
 
